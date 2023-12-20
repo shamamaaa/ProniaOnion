@@ -1,26 +1,47 @@
 ﻿<Properties StartupConfiguration="{BD38D8FB-52D7-4503-9627-5F585072375F}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.src.Presentation.ProniaOnion.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.src.Infrastructure.ProniaOnion.Infrastructure FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/Infrastructure/ProniaOnion.Persistence/Implementations/Services/CategoryService.cs">
+    <Files>
+      <File FileName="src/Infrastructure/ProniaOnion.Persistence/Implementations/Services/CategoryService.cs" Line="23" Column="141" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ProniaOnion" expanded="True">
             <Node name="src" expanded="True">
-              <Node name="Infrastructure" expanded="True" />
+              <Node name="Core" expanded="True">
+                <Node name="ProniaOnion.Application">
+                  <Node name="MappingProfiles" expanded="True" />
+                  <Node name="ServiceRegistration" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="Infrastructure" expanded="True">
+                <Node name="ProniaOnion.Persistence">
+                  <Node name="Implementations" expanded="True">
+                    <Node name="Repositories" expanded="True" />
+                    <Node name="Services" expanded="True">
+                      <Node name="CategoryService.cs" selected="True" />
+                    </Node>
+                  </Node>
+                  <Node name="ServisRegistration" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="Presentation" expanded="True">
+                <Node name="ProniaOnion.API">
+                  <Node name="Controllers" expanded="True" />
+                </Node>
+              </Node>
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.src.Core.ProniaOnion.Domain FirstBuild="True" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.src.Infrastructure.ProniaOnion.Persistence FirstBuild="True" />
-  <MonoDevelop.Ide.ItemProperties.src.Core.ProniaOnion.Application FirstBuild="True" />
-  <MonoDevelop.Ide.ItemProperties.src.Infrastructure.ProniaOnion.Infrastructure FirstBuild="True" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.src.Presentation.ProniaOnion.API FirstBuild="True" PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
 </Properties>

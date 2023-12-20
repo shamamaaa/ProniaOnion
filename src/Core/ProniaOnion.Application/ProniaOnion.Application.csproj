@@ -11,14 +11,28 @@
     <None Remove="Abstractions\Repositories\" />
     <None Remove="Abstractions\Services\" />
     <None Remove="Abstractions\Repositories\Generic\" />
+    <None Remove="Dtos\" />
+    <None Remove="Dtos\Categories\" />
+    <None Remove="Dtos\Tags\" />
+    <None Remove="MappingProfiles\" />
+    <None Remove="ServiceRegistration\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstractions\" />
     <Folder Include="Abstractions\Repositories\" />
     <Folder Include="Abstractions\Services\" />
     <Folder Include="Abstractions\Repositories\Generic\" />
+    <Folder Include="Dtos\" />
+    <Folder Include="Dtos\Categories\" />
+    <Folder Include="Dtos\Tags\" />
+    <Folder Include="MappingProfiles\" />
+    <Folder Include="ServiceRegistration\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ProniaOnion.Domain\ProniaOnion.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
   </ItemGroup>
 </Project>
