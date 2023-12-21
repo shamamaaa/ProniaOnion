@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "srlJJHpazAB2UfBPEKjMR7ySX8DlrnyPiom8A+eOSI7v0L2L9IqhnXY6c8ZUK8e6a3GU2CkdzSEtcJwd6CI9TA==",
+  "dgSpecHash": "pEgzsyU6+b+FYU3XqSi3IfJyRaefB9NIvuW95LyeUs13beluKNw8Jn8vpUzp6LJci9vqfSIxNoIaGw7y3gWoqw==",
   "success": true,
   "projectFilePath": "/Users/shamamaguliyeva/Desktop/ProniaOnion/src/Infrastructure/ProniaOnion.Persistence/ProniaOnion.Persistence.csproj",
   "expectedPackageFiles": [
     "/Users/shamamaguliyeva/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/shamamaguliyeva/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "/Users/shamamaguliyeva/.nuget/packages/fluentvalidation/11.5.1/fluentvalidation.11.5.1.nupkg.sha512",
+    "/Users/shamamaguliyeva/.nuget/packages/fluentvalidation.aspnetcore/11.3.0/fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "/Users/shamamaguliyeva/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.5.1/fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "/Users/shamamaguliyeva/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/shamamaguliyeva/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/shamamaguliyeva/.nuget/packages/microsoft.data.sqlclient/2.1.4/microsoft.data.sqlclient.2.1.4.nupkg.sha512",

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ProniaOnion.Application.Abstractions.Services;
 using ProniaOnion.Application.Dtos;
+using ProniaOnion.Persistence.Implementations.Services;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -40,6 +41,7 @@ namespace ProniaOnion.API.Controllers
             await _service.CreateAsync(categoryDto);
             return StatusCode(StatusCodes.Status201Created);
         }
+
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromForm] UpdateCategoryDto categoryDto)
         {
@@ -47,11 +49,17 @@ namespace ProniaOnion.API.Controllers
             await _service.UpdateAsync(id, categoryDto);
             return NoContent();
         }
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            if (id <= 0) return StatusCode(StatusCodes.Status400BadRequest);
             await _service.DeleteAsync(id);
+            return NoContent();
+        }
+        [HttpDelete("SoftDelete/{id}")]
+        public async Task<IActionResult> SoftDelete(int id)
+        {
+            await _service.SoftDeleteAsync(id);
             return NoContent();
         }
     }

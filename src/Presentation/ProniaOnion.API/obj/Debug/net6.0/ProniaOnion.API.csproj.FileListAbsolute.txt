@@ -74,3 +74,6 @@
 /Users/shamamaguliyeva/Desktop/ProniaOnion/src/Presentation/ProniaOnion.API/obj/Debug/net6.0/ref/ProniaOnion.API.dll
 /Users/shamamaguliyeva/Desktop/ProniaOnion/src/Presentation/ProniaOnion.API/bin/Debug/net6.0/AutoMapper.dll
 /Users/shamamaguliyeva/Desktop/ProniaOnion/src/Presentation/ProniaOnion.API/bin/Debug/net6.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/Users/shamamaguliyeva/Desktop/ProniaOnion/src/Presentation/ProniaOnion.API/bin/Debug/net6.0/FluentValidation.dll
+/Users/shamamaguliyeva/Desktop/ProniaOnion/src/Presentation/ProniaOnion.API/bin/Debug/net6.0/FluentValidation.AspNetCore.dll
+/Users/shamamaguliyeva/Desktop/ProniaOnion/src/Presentation/ProniaOnion.API/bin/Debug/net6.0/FluentValidation.DependencyInjectionExtensions.dll

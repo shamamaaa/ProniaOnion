@@ -16,6 +16,8 @@
     <None Remove="Dtos\Tags\" />
     <None Remove="MappingProfiles\" />
     <None Remove="ServiceRegistration\" />
+    <None Remove="Validators\" />
+    <None Remove="Dtos\Products\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstractions\" />
@@ -27,6 +29,8 @@
     <Folder Include="Dtos\Tags\" />
     <Folder Include="MappingProfiles\" />
     <Folder Include="ServiceRegistration\" />
+    <Folder Include="Validators\" />
+    <Folder Include="Dtos\Products\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ProniaOnion.Domain\ProniaOnion.Domain.csproj" />
@@ -34,5 +38,6 @@
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
   </ItemGroup>
 </Project>
