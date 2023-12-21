@@ -44,7 +44,7 @@ namespace ProniaOnion.Persistence.Implementations.Services
         {
             Category category = await _repository.GetByIdAsync(id);
             if (category is null) throw new Exception("Not found");
-            category.Name = categoryDto.Name;
+            _mapper.Map(categoryDto, category);
             _repository.Update(category);
             await _repository.SaveChangesAsync();
         }

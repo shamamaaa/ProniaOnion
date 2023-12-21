@@ -43,7 +43,7 @@ namespace ProniaOnion.Persistence.Implementations.Services
         {
             Tag tag = await _repository.GetByIdAsync(id);
             if (tag is null) throw new Exception("Not found");
-            tag.Name = tagDto.Name;
+            _mapper.Map(tagDto, tag);
             _repository.Update(tag);
             await _repository.SaveChangesAsync();
         }
