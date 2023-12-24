@@ -27,13 +27,11 @@ namespace ProniaOnion.API.Controllers
             return Ok(await _service.GetAllAsync(page, take));
         }
 
-        //[HttpGet("{id}")]
-        //public async Task<IActionResult> Get(int id)
-        //{
-        //    if (id <= 0) return StatusCode(StatusCodes.Status400BadRequest);
-
-        //    return StatusCode(StatusCodes.Status200OK, await _service.GetAsync(id));
-        //}
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(int id)
+        {
+            return Ok(await _service.GetByIdAsync(id));
+        }
 
         [HttpPost]
         public async Task<IActionResult> Create([FromForm] CreateCategoryDto categoryDto)

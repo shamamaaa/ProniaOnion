@@ -17,29 +17,20 @@ namespace ProniaOnion.Persistence.Implementations.Repositories.Generic
             _context = context;
         }
 
-        public async Task AddAsync(T item)
+        //Get methods
+
+        public IQueryable<T> GetAll(bool isTracking = true, bool ignoreQuery = false, params string[] includes)
         {
-            await _table.AddAsync(item);
+            var query = _table.AsQueryable();
+
+            query = IncludeMethod(query, includes);
+
+            if (ignoreQuery) query = query.IgnoreQueryFilters();
+
+            return isTracking ? query : query.AsNoTracking();
         }
 
-        public void Delete(T item)
-        {
-            _table.Remove(item);
-        }
-
-        public void SoftDelete(T item)
-        {
-            item.IsDeleted = true;
-            _table.Update(item);
-        }
-
-        public IQueryable<T> GetAllAsync(Expression<Func<T, bool>>? expression = null,
-            Expression<Func<T, object>>? orderExpression = null,
-            bool IsDescending = false, int skip = 0,
-            int take = 0,
-            bool isTracking = true,
-            bool IsDeleted = false,
-            params string[] includes)
+        public IQueryable<T> GetAllWhere(Expression<Func<T, bool>>? expression = null, Expression<Func<T, object>>? orderExpression = null, bool IsDescending = false, int skip = 0, int take = 0, bool isTracking = true, bool ignoreQuery = false, params string[] includes)
         {
             var query = _table.AsQueryable();
 
@@ -56,6 +47,30 @@ namespace ProniaOnion.Persistence.Implementations.Repositories.Generic
 
             if (take != 0) query = query.Take(take);
 
+            query = IncludeMethod(query, includes);
+
+            if (ignoreQuery) query = query.IgnoreQueryFilters();
+
+            return isTracking ? query : query.AsNoTracking();
+        }
+
+        public async Task<T> GetByIdAsync(int id, bool isTracking = true, bool ignoreQuery = false, params string[] includes)
+        {
+            IQueryable<T> query = _table.Where(x => x.Id == id);
+
+            query = IncludeMethod(query, includes);
+
+            if (!isTracking) query = query.AsNoTracking();
+
+            if (ignoreQuery) query = query.IgnoreQueryFilters();
+
+            return await query.FirstOrDefaultAsync();
+        }
+
+        public async Task<T> GetByExpressionAsync(Expression<Func<T, bool>>? expression, bool isTracking = true, bool ignoreQuery = false, params string[] includes)
+        {
+            IQueryable<T> query = _table.Where(expression);
+
             if (includes is not null)
             {
                 for (int i = 0; i < includes.Length; i++)
@@ -64,16 +79,28 @@ namespace ProniaOnion.Persistence.Implementations.Repositories.Generic
                 }
             }
 
-            if (IsDeleted) query = query.IgnoreQueryFilters();
+            if (!isTracking) query = query.AsNoTracking();
 
-            return isTracking ? query : query.AsNoTracking();
+            if (ignoreQuery) query = query.IgnoreQueryFilters();
+
+            return await query.FirstOrDefaultAsync();
+
         }
 
-        public async Task<T> GetByIdAsync(int id)
-        {
-            T item = await _table.FirstOrDefaultAsync(c => c.Id == id);
-            return item;
 
+        public async Task AddAsync(T item)
+        {
+            await _table.AddAsync(item);
+        }
+
+        public void Delete(T item)
+        {
+            _table.Remove(item);
+        }
+
+        public void SoftDelete(T item)
+        {
+            item.IsDeleted = true;
         }
 
         public async Task SaveChangesAsync()
@@ -86,6 +113,28 @@ namespace ProniaOnion.Persistence.Implementations.Repositories.Generic
             _table.Update(item);
         }
 
+        public async Task<bool> IsExistAsync(Expression<Func<T, bool>>? expression, bool ignoreQuery = false)
+        {
+            return ignoreQuery ? await _table.AnyAsync(expression) : await _table.IgnoreQueryFilters().AnyAsync(expression);
+        }
+
+        public void ReverseSoftDelete(T entity)
+        {
+            entity.IsDeleted = false;
+        }
+
+        private IQueryable<T> IncludeMethod(IQueryable<T> query, params string[] includes)
+        {
+            if (includes != null)
+            {
+                for (int i = 0; i < includes.Length; i++)
+                {
+                    query = query.Include(includes[i]);
+                }
+            }
+            return query;
+        }
     }
+
 }
 

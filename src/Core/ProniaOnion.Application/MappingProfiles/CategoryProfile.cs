@@ -9,9 +9,12 @@ namespace ProniaOnion.Application.MappingProfiles
     {
         public CategoryProfile()
         {
-            CreateMap<Category, GetCategoryDto>().ReverseMap();
+            CreateMap<Category, ItemCategoryDto>().ReverseMap();
             CreateMap<CreateCategoryDto, Category>();
             CreateMap<UpdateCategoryDto, Category>().ReverseMap();
+            CreateMap<Category, IncludeCategoryDto>().ReverseMap();
+            CreateMap<Category, GetCategoryDto>().ReverseMap();
+
         }
     }
 }
