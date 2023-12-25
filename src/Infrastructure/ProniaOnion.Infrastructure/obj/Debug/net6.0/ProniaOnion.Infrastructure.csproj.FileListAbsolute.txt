@@ -1,0 +1,12 @@
+/Users/shamamaguliyeva/Desktop/ProniaOnion/src/Infrastructure/ProniaOnion.Infrastructure/bin/Debug/net6.0/ProniaOnion.Infrastructure.deps.json
+/Users/shamamaguliyeva/Desktop/ProniaOnion/src/Infrastructure/ProniaOnion.Infrastructure/bin/Debug/net6.0/ProniaOnion.Infrastructure.dll
+/Users/shamamaguliyeva/Desktop/ProniaOnion/src/Infrastructure/ProniaOnion.Infrastructure/bin/Debug/net6.0/ProniaOnion.Infrastructure.pdb
+/Users/shamamaguliyeva/Desktop/ProniaOnion/src/Infrastructure/ProniaOnion.Infrastructure/obj/Debug/net6.0/ProniaOnion.Infrastructure.csproj.AssemblyReference.cache
+/Users/shamamaguliyeva/Desktop/ProniaOnion/src/Infrastructure/ProniaOnion.Infrastructure/obj/Debug/net6.0/ProniaOnion.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/shamamaguliyeva/Desktop/ProniaOnion/src/Infrastructure/ProniaOnion.Infrastructure/obj/Debug/net6.0/ProniaOnion.Infrastructure.AssemblyInfoInputs.cache
+/Users/shamamaguliyeva/Desktop/ProniaOnion/src/Infrastructure/ProniaOnion.Infrastructure/obj/Debug/net6.0/ProniaOnion.Infrastructure.AssemblyInfo.cs
+/Users/shamamaguliyeva/Desktop/ProniaOnion/src/Infrastructure/ProniaOnion.Infrastructure/obj/Debug/net6.0/ProniaOnion.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/shamamaguliyeva/Desktop/ProniaOnion/src/Infrastructure/ProniaOnion.Infrastructure/obj/Debug/net6.0/ProniaOnion.Infrastructure.dll
+/Users/shamamaguliyeva/Desktop/ProniaOnion/src/Infrastructure/ProniaOnion.Infrastructure/obj/Debug/net6.0/refint/ProniaOnion.Infrastructure.dll
+/Users/shamamaguliyeva/Desktop/ProniaOnion/src/Infrastructure/ProniaOnion.Infrastructure/obj/Debug/net6.0/ProniaOnion.Infrastructure.pdb
+/Users/shamamaguliyeva/Desktop/ProniaOnion/src/Infrastructure/ProniaOnion.Infrastructure/obj/Debug/net6.0/ref/ProniaOnion.Infrastructure.dll

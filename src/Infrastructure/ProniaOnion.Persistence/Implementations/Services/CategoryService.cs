@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProniaOnion.Application.Abstractions.Repositories;
 using ProniaOnion.Application.Abstractions.Services;
@@ -49,6 +51,14 @@ namespace ProniaOnion.Persistence.Implementations.Services
             await _repository.SaveChangesAsync();
         }
 
+        public async Task ReverseDeleteAsync(int id)
+        {
+            Category category = await _repository.GetByIdAsync(id, ignoreQuery: true);
+            if (category is null) throw new Exception("Not found");
+            _repository.ReverseSoftDelete(category);
+            await _repository.SaveChangesAsync();
+        }
+
         public async Task UpdateAsync(int id, UpdateCategoryDto categoryDto)
         {
             Category category = await _repository.GetByIdAsync(id);
@@ -72,6 +82,7 @@ namespace ProniaOnion.Persistence.Implementations.Services
 
             return dto;
         }
+
     }
 }
 

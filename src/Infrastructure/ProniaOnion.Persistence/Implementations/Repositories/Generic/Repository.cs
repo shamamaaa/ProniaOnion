@@ -125,6 +125,7 @@ namespace ProniaOnion.Persistence.Implementations.Repositories.Generic
 
         private IQueryable<T> IncludeMethod(IQueryable<T> query, params string[] includes)
         {
+
             if (includes != null)
             {
                 for (int i = 0; i < includes.Length; i++)

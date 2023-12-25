@@ -1,8 +1,18 @@
 ﻿<Properties StartupConfiguration="{BD38D8FB-52D7-4503-9627-5F585072375F}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.src.Presentation.ProniaOnion.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/Infrastructure/ProniaOnion.Persistence/Implementations/Services/ProductService.cs">
+    <Files>
+      <File FileName="src/Infrastructure/ProniaOnion.Persistence/Implementations/Services/ProductService.cs" Line="81" Column="1" />
+      <File FileName="src/Core/ProniaOnion.Application/Dtos/Products/UpdateProductDto.cs" Line="6" Column="1" />
+      <File FileName="src/Core/ProniaOnion.Application/Abstractions/Services/IColorService.cs" Line="1" Column="1" />
+      <File FileName="src/Core/ProniaOnion.Application/MappingProfiles/ProductProfile.cs" Line="16" Column="65" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -10,31 +20,33 @@
             <Node name="src" expanded="True">
               <Node name="Core" expanded="True">
                 <Node name="ProniaOnion.Application">
-                  <Node name="Abstractions">
+                  <Node name="Abstractions" expanded="True">
                     <Node name="Services" expanded="True" />
                   </Node>
+                  <Node name="Dtos" expanded="True">
+                    <Node name="Products" expanded="True" />
+                  </Node>
+                  <Node name="MappingProfiles" expanded="True" />
                 </Node>
               </Node>
               <Node name="Infrastructure" expanded="True">
                 <Node name="ProniaOnion.Persistence">
-                  <Node name="Contexts" expanded="True" />
-                  <Node name="Implementations">
+                  <Node name="Implementations" expanded="True">
                     <Node name="Services" expanded="True">
-                      <Node name="TagService.cs" selected="True" />
+                      <Node name="ProductService.cs" selected="True" />
                     </Node>
                   </Node>
                 </Node>
               </Node>
-              <Node name="Presentation" expanded="True" />
+              <Node name="Presentation">
+                <Node name="ProniaOnion.API">
+                  <Node name="Controllers" expanded="True" />
+                </Node>
+              </Node>
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.src.Presentation.ProniaOnion.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.ItemProperties.src.Infrastructure.ProniaOnion.Infrastructure FirstBuild="True" />
 </Properties>

@@ -4,7 +4,7 @@ using ProniaOnion.Application.Dtos;
 
 namespace ProniaOnion.Application.Validators
 {
-	internal class UpdateCategoryDtoValidator : AbstractValidator<UpdateCategoryDto>
+	public class UpdateCategoryDtoValidator : AbstractValidator<UpdateCategoryDto>
     {
 		public UpdateCategoryDtoValidator()
 		{

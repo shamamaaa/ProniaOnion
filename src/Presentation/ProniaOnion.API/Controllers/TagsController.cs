@@ -58,6 +58,14 @@ namespace ProniaOnion.API.Controllers
             await _service.SoftDeleteAsync(id);
             return NoContent();
         }
+
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> ReverseSoftDelete(int id)
+        {
+            if (id <= 0) return StatusCode(StatusCodes.Status400BadRequest);
+            await _service.ReverseDeleteAsync(id);
+            return NoContent();
+        }
     }
 }
 

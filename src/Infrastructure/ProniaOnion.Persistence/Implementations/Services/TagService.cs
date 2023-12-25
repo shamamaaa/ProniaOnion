@@ -25,6 +25,18 @@ namespace ProniaOnion.Persistence.Implementations.Services
             return tagDtos;
         }
 
+        public async Task<GetTagDto> GetByIdAsync(int id)
+        {
+            if (id <= 0) throw new Exception("Bad Request");
+            string[] include = { $"{nameof(Tag.ProductTags)}.{nameof(ProductTag.Product)}" };
+            Tag item = await _repository.GetByIdAsync(id, includes: include);
+            if (item == null) throw new Exception("Tag not found");
+
+            GetTagDto dto = _mapper.Map<GetTagDto>(item);
+
+            return dto;
+        }
+
         public async Task CreateAsync(CreateTagDto tagDto)
         {
             bool result = await _repository.IsExistAsync(c => c.Name == tagDto.Name);
@@ -50,6 +62,14 @@ namespace ProniaOnion.Persistence.Implementations.Services
             await _repository.SaveChangesAsync();
         }
 
+        public async Task ReverseDeleteAsync(int id)
+        {
+            Tag tag = await _repository.GetByIdAsync(id, ignoreQuery:true);
+            if (tag is null) throw new Exception("Not found");
+            _repository.ReverseSoftDelete(tag);
+            await _repository.SaveChangesAsync();
+        }
+
         public async Task UpdateAsync(int id, UpdateTagDto tagDto)
         {
 
@@ -64,16 +84,8 @@ namespace ProniaOnion.Persistence.Implementations.Services
             await _repository.SaveChangesAsync();
         }
 
-        public async Task<GetTagDto> GetByIdAsync(int id)
-        {
-            if (id <= 0) throw new Exception("Bad Request");
-            Tag item = await _repository.GetByIdAsync(id, includes: $"{nameof(Tag.ProductTags)}.{nameof(ProductTag.Product)}");
-            if (item == null) throw new Exception("Not Found");
 
-            GetTagDto dto = _mapper.Map<GetTagDto>(item);
 
-            return dto;
-        }
     }
 }
 

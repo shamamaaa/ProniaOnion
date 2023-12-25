@@ -18,6 +18,7 @@
     <None Remove="ServiceRegistration\" />
     <None Remove="Validators\" />
     <None Remove="Dtos\Products\" />
+    <None Remove="Dtos\Colors\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstractions\" />
@@ -31,6 +32,7 @@
     <Folder Include="ServiceRegistration\" />
     <Folder Include="Validators\" />
     <Folder Include="Dtos\Products\" />
+    <Folder Include="Dtos\Colors\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ProniaOnion.Domain\ProniaOnion.Domain.csproj" />
