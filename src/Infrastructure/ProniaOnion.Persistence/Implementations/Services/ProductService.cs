@@ -122,25 +122,40 @@ namespace ProniaOnion.Persistence.Implementations.Services
 
         public async Task DeleteAsync(int id)
         {
-            Product product = await _repository.GetByIdAsync(id);
-            if (product is null) throw new Exception("Not found");
-            _repository.Delete(product);
+            string[] include = { $"{nameof(Product.ProductColors)}", $"{nameof(Product.ProductTags)}" };
+            Product existed = await _repository.GetByIdAsync(id, includes: include);
+            if (existed is null) throw new Exception("Not found");
+            _repository.Delete(existed);
             await _repository.SaveChangesAsync();
         }
 
         public async Task SoftDeleteAsync(int id)
         {
-            Product product = await _repository.GetByIdAsync(id);
-            if (product is null) throw new Exception("Not found");
-            _repository.SoftDelete(product);
+            string[] include = { $"{nameof(Product.ProductColors)}", $"{nameof(Product.ProductTags)}" };
+            Product existed = await _repository.GetByIdAsync(id, includes: include);
+            if (existed is null) throw new Exception("Not found");
+            _repository.SoftDelete(existed);
+
+            foreach (ProductColor productColor in existed.ProductColors)
+                productColor.IsDeleted = true;
+
+            foreach (ProductTag productTag in existed.ProductTags)
+                productTag.IsDeleted = true;
+
             await _repository.SaveChangesAsync();
         }
 
         public async Task ReverseDeleteAsync(int id)
         {
-            Product product = await _repository.GetByIdAsync(id, ignoreQuery: true);
-            if (product is null) throw new Exception("Not found");
-            _repository.ReverseSoftDelete(product);
+            string[] include = { $"{nameof(Product.ProductColors)}", $"{nameof(Product.ProductTags)}" };
+            Product existed = await _repository.GetByIdAsync(id, includes: include, ignoreQuery: true);
+            if (existed is null) throw new Exception("Not found");
+            _repository.ReverseSoftDelete(existed);
+            foreach (ProductColor productColor in existed.ProductColors)
+                productColor.IsDeleted = false;
+
+            foreach (ProductTag productTag in existed.ProductTags)
+                productTag.IsDeleted = false;
             await _repository.SaveChangesAsync();
         }
 

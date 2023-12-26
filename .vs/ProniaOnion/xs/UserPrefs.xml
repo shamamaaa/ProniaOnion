@@ -1,26 +1,19 @@
 ﻿<Properties StartupConfiguration="{BD38D8FB-52D7-4503-9627-5F585072375F}|Default">
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.src.Presentation.ProniaOnion.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/Infrastructure/ProniaOnion.Persistence/Implementations/Services/ProductService.cs">
-    <Files>
-      <File FileName="src/Infrastructure/ProniaOnion.Persistence/Implementations/Services/ProductService.cs" Line="81" Column="1" />
-      <File FileName="src/Core/ProniaOnion.Application/Dtos/Products/UpdateProductDto.cs" Line="6" Column="1" />
-      <File FileName="src/Core/ProniaOnion.Application/Abstractions/Services/IColorService.cs" Line="1" Column="1" />
-      <File FileName="src/Core/ProniaOnion.Application/MappingProfiles/ProductProfile.cs" Line="16" Column="65" />
-    </Files>
+  <MonoDevelop.Ide.ItemProperties.src.Presentation.ProniaOnion.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ProniaOnion" expanded="True">
-            <Node name="src" expanded="True">
+          <Node name="ProniaOnion">
+            <Node name="src">
               <Node name="Core" expanded="True">
-                <Node name="ProniaOnion.Application">
+                <Node name="ProniaOnion.Application" expanded="True">
                   <Node name="Abstractions" expanded="True">
+                    <Node name="Repositories" expanded="True">
+                      <Node name="Generic" expanded="True" />
+                    </Node>
                     <Node name="Services" expanded="True" />
                   </Node>
                   <Node name="Dtos" expanded="True">
@@ -29,10 +22,10 @@
                   <Node name="MappingProfiles" expanded="True" />
                 </Node>
               </Node>
-              <Node name="Infrastructure" expanded="True">
+              <Node name="Infrastructure">
                 <Node name="ProniaOnion.Persistence">
-                  <Node name="Implementations" expanded="True">
-                    <Node name="Services" expanded="True">
+                  <Node name="Implementations">
+                    <Node name="Services">
                       <Node name="ProductService.cs" selected="True" />
                     </Node>
                   </Node>
@@ -49,4 +42,8 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>
