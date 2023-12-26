@@ -1,44 +1,40 @@
 ﻿<Properties StartupConfiguration="{BD38D8FB-52D7-4503-9627-5F585072375F}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.src.Presentation.ProniaOnion.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/Core/ProniaOnion.Application/MappingProfiles/ProductProfile.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/Infrastructure/ProniaOnion.Persistence/Implementations/Services/AuthenticationService.cs">
     <Files>
-      <File FileName="src/Infrastructure/ProniaOnion.Persistence/Implementations/Services/ProductService.cs" Line="81" Column="1" />
-      <File FileName="src/Presentation/ProniaOnion.API/Controllers/CategoriesController.cs" Line="64" Column="1" />
-      <File FileName="src/Presentation/ProniaOnion.API/Controllers/ProductsController.cs" Line="56" Column="40" />
-      <File FileName="src/Infrastructure/ProniaOnion.Persistence/Implementations/Services/ColorService.cs" Line="62" Column="10" />
-      <File FileName="src/Core/ProniaOnion.Application/MappingProfiles/ProductProfile.cs" Line="1" Column="1" />
+      <File FileName="src/Infrastructure/ProniaOnion.Persistence/Implementations/Services/AuthenticationService.cs" Line="77" Column="19" />
+      <File FileName="src/Presentation/ProniaOnion.API/Controllers/UsersController.cs" Line="37" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ProniaOnion" expanded="True">
-            <Node name="src" expanded="True">
-              <Node name="Core" expanded="True">
-                <Node name="ProniaOnion.Application" expanded="True">
-                  <Node name="Abstractions" expanded="True">
-                    <Node name="Services" expanded="True" />
-                  </Node>
-                  <Node name="MappingProfiles" expanded="True">
-                    <Node name="ProductProfile.cs" selected="True" />
+          <Node name="ProniaOnion">
+            <Node name="src">
+              <Node name="Core">
+                <Node name="ProniaOnion.Application">
+                  <Node name="Dtos" expanded="True">
+                    <Node name="Users" expanded="True" />
                   </Node>
                   <Node name="Validators" expanded="True" />
                 </Node>
+                <Node name="ProniaOnion.Domain" expanded="True" />
               </Node>
-              <Node name="Infrastructure" expanded="True">
-                <Node name="ProniaOnion.Persistence" expanded="True">
-                  <Node name="Contexts" expanded="True" />
-                  <Node name="Implementations" expanded="True">
-                    <Node name="Repositories" expanded="True">
-                      <Node name="Generic" expanded="True" />
+              <Node name="Infrastructure">
+                <Node name="ProniaOnion.Persistence">
+                  <Node name="Implementations">
+                    <Node name="Services">
+                      <Node name="AuthenticationService.cs" selected="True" />
                     </Node>
-                    <Node name="Services" expanded="True" />
                   </Node>
+                  <Node name="ServisRegistration" expanded="True" />
                 </Node>
               </Node>
               <Node name="Presentation" expanded="True">
-                <Node name="ProniaOnion.API" expanded="True">
+                <Node name="ProniaOnion.API">
                   <Node name="Controllers" expanded="True" />
                 </Node>
               </Node>
@@ -48,8 +44,6 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.src.Presentation.ProniaOnion.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

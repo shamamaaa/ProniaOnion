@@ -1,9 +1,11 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using System.Text;
 using AutoMapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
 using ProniaOnion.Application.Abstractions.Services;
 using ProniaOnion.Application.Dtos.Users;
 using ProniaOnion.Domain.Entities;
@@ -42,7 +44,7 @@ namespace ProniaOnion.Persistence.Implementations.Services
             }
         }
 
-        public async Task<string> Login(LoginDto loginDto)
+        public async Task<TokenResponseDto> Login(LoginDto loginDto)
         {
             AppUser user = await _userManager.FindByNameAsync(loginDto.UserNameOrEmail);
             if (user is null)
@@ -55,11 +57,30 @@ namespace ProniaOnion.Persistence.Implementations.Services
                 throw new Exception("User not found, please input true username/email or password");
             }
 
-            JwtSecurityToken token = new JwtSecurityToken(
+            List<Claim> claims = new List<Claim>()
+            {
+                new Claim(ClaimTypes.Name, user.UserName),
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.NameIdentifier, user.Id)
+            };
+
+            SymmetricSecurityKey symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:SecurityKey"]));
+
+            SigningCredentials signingCredentials = new SigningCredentials(symmetricSecurityKey, SecurityAlgorithms.HmacSha512Signature);
+
+            JwtSecurityToken jwtSecurityToken = new JwtSecurityToken(
                issuer: _configuration["Jwt:Issuer"],
-               audience: _configuration["Jwt:Audience"]
+               audience: _configuration["Jwt:Audience"],
+               claims:claims,
+               notBefore:DateTime.UtcNow,
+               expires:DateTime.UtcNow.AddHours(1),
+               signingCredentials:signingCredentials
                 );
 
+            JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler(); //jwt tokeni stringe cevirmek ucun
+            string token = tokenHandler.WriteToken(jwtSecurityToken);
+
+            return new(token, jwtSecurityToken.ValidTo, user.UserName);
         }
     }
 }
