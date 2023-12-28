@@ -20,6 +20,7 @@
     <None Remove="Dtos\Products\" />
     <None Remove="Dtos\Colors\" />
     <None Remove="Dtos\Users\" />
+    <None Remove="Dtos\Tokens\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstractions\" />
@@ -35,6 +36,7 @@
     <Folder Include="Dtos\Products\" />
     <Folder Include="Dtos\Colors\" />
     <Folder Include="Dtos\Users\" />
+    <Folder Include="Dtos\Tokens\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ProniaOnion.Domain\ProniaOnion.Domain.csproj" />

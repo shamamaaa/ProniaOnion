@@ -1,41 +1,34 @@
 ﻿<Properties StartupConfiguration="{BD38D8FB-52D7-4503-9627-5F585072375F}|Default">
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/Infrastructure/ProniaOnion.Persistence/Implementations/Services/AuthenticationService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/Presentation/ProniaOnion.API/Controllers/UsersController.cs">
     <Files>
-      <File FileName="src/Infrastructure/ProniaOnion.Persistence/Implementations/Services/AuthenticationService.cs" Line="77" Column="19" />
-      <File FileName="src/Presentation/ProniaOnion.API/Controllers/UsersController.cs" Line="37" Column="1" />
+      <File FileName="src/Presentation/ProniaOnion.API/Controllers/UsersController.cs" Line="11" Column="1" />
+      <File FileName="src/Presentation/ProniaOnion.API/appsettings.json" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ProniaOnion">
-            <Node name="src">
-              <Node name="Core">
-                <Node name="ProniaOnion.Application">
-                  <Node name="Dtos" expanded="True">
-                    <Node name="Users" expanded="True" />
-                  </Node>
-                  <Node name="Validators" expanded="True" />
-                </Node>
-                <Node name="ProniaOnion.Domain" expanded="True" />
-              </Node>
-              <Node name="Infrastructure">
+          <Node name="ProniaOnion" expanded="True">
+            <Node name="src" expanded="True">
+              <Node name="Infrastructure" expanded="True">
                 <Node name="ProniaOnion.Persistence">
-                  <Node name="Implementations">
-                    <Node name="Services">
-                      <Node name="AuthenticationService.cs" selected="True" />
-                    </Node>
+                  <Node name="Contexts" expanded="True">
+                    <Node name="Migrations" expanded="True" />
+                  </Node>
+                  <Node name="Implementations" expanded="True">
+                    <Node name="Services" expanded="True" />
                   </Node>
                   <Node name="ServisRegistration" expanded="True" />
                 </Node>
               </Node>
-              <Node name="Presentation" expanded="True">
+              <Node name="Presentation">
                 <Node name="ProniaOnion.API">
-                  <Node name="Controllers" expanded="True" />
+                  <Node name="Controllers">
+                    <Node name="UsersController.cs" selected="True" />
+                  </Node>
                 </Node>
               </Node>
             </Node>
@@ -44,6 +37,7 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.src.Presentation.ProniaOnion.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

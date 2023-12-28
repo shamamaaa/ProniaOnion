@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProniaOnion.Application.Abstractions.Services;
 using ProniaOnion.Application.Dtos.Products;
@@ -11,6 +8,7 @@ using ProniaOnion.Application.Dtos.Products;
 namespace ProniaOnion.API.Controllers
 {
     [Route("[controller]")]
+    [Authorize]
     public class ProductsController : Controller
     {
         private readonly IProductService _service;

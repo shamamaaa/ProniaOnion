@@ -24,5 +24,8 @@
     <ProjectReference Include="..\..\Infrastructure\ProniaOnion.Persistence\ProniaOnion.Persistence.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\ProniaOnion.Infrastructure\ProniaOnion.Infrastructure.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 </Project>

@@ -10,3 +10,8 @@
 /Users/shamamaguliyeva/Desktop/ProniaOnion/src/Infrastructure/ProniaOnion.Infrastructure/obj/Debug/net6.0/refint/ProniaOnion.Infrastructure.dll
 /Users/shamamaguliyeva/Desktop/ProniaOnion/src/Infrastructure/ProniaOnion.Infrastructure/obj/Debug/net6.0/ProniaOnion.Infrastructure.pdb
 /Users/shamamaguliyeva/Desktop/ProniaOnion/src/Infrastructure/ProniaOnion.Infrastructure/obj/Debug/net6.0/ref/ProniaOnion.Infrastructure.dll
+/Users/shamamaguliyeva/Desktop/ProniaOnion/src/Infrastructure/ProniaOnion.Infrastructure/bin/Debug/net6.0/ProniaOnion.Application.dll
+/Users/shamamaguliyeva/Desktop/ProniaOnion/src/Infrastructure/ProniaOnion.Infrastructure/bin/Debug/net6.0/ProniaOnion.Domain.dll
+/Users/shamamaguliyeva/Desktop/ProniaOnion/src/Infrastructure/ProniaOnion.Infrastructure/bin/Debug/net6.0/ProniaOnion.Application.pdb
+/Users/shamamaguliyeva/Desktop/ProniaOnion/src/Infrastructure/ProniaOnion.Infrastructure/bin/Debug/net6.0/ProniaOnion.Domain.pdb
+/Users/shamamaguliyeva/Desktop/ProniaOnion/src/Infrastructure/ProniaOnion.Infrastructure/obj/Debug/net6.0/ProniaOnion.Infrastructure.csproj.CopyComplete
